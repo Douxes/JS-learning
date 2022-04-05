@@ -1,24 +1,14 @@
 'use strict';
 
-function first() {
-    //Do something
-    setTimeout(function() {
-        console.log(1);
-    }, 500);
-}
+let btn = document.querySelector('.btn');
+let img = document.querySelector('.img');
 
-function second() {
-    console.log(2);
-}
+btn.addEventListener('click', function() {
 
-first();
-second();
-
-function learnJS(lang, callback) {
-    console.log(`Я учу: ${lang}`);
-    callback();
-}
-
-learnJS('JavaScript', function() {
-    console.log('Я прошел этот урок');
-});
+    if (img.classList.contains('show')) {
+        img.classList.remove('show');
+    } else {
+        img.classList.add('show');
+    }
+    
+})
