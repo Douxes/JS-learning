@@ -1,14 +1,24 @@
 'use strict';
 
-let btn = document.querySelector('.btn');
-let img = document.querySelector('.img');
+const arr = [1, 2, 3, 4, 5, 6, 8];
+// arr[99] = 0;
+// console.log(arr.length);
+// console.log(arr);
 
-btn.addEventListener('click', function() {
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
 
-    if (img.classList.contains('show')) {
-        img.classList.remove('show');
-    } else {
-        img.classList.add('show');
-    }
-    
-})
+
+// arr.pop();
+// arr.push(10);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
