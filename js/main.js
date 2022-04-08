@@ -146,15 +146,52 @@
 
 // console.log(0 || "" || 2 || undefined || true || falsе);
 
+// const arr = ['a', 'b', 'c'];
 
+// console.log(arr[0]);
+// console.log(arr[1]);
+// console.log(arr[2]);
 
+// const arr = ['a', 'b', 'c', 'd'];
 
+// console.log(arr[0] + ' + ' + arr[1] + ', ' + arr[2] + ' + ' + arr[3]);
 
+// const array = [2, 5, 3, 9];
 
+// let x = array[0] * array[1];
+// let y = array[2] * array[3];
 
+// let result = x + y;
 
+// console.log(result);
 
+// const obj = {
+//     a: 1,
+//     b: 2,
+//     c: 3
+// };
 
+// console.log(obj.c);
 
+// const obj = {
+//     Kolya: '1000',
+//     Vasya: '500',
+//     Petya: '200'
+// };
 
+// console.log(obj['Kolya'], obj['Petya']);
 
+// let calc = function(a, b) {
+//     console.log(a * b);
+//     console.log(a + b);
+// }
+
+// calc(5, 5);
+
+let str = '123456';
+
+let numbers = +str;
+
+numbers = Array.from(numbers);
+
+console.log(numbers);
