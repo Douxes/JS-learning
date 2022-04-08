@@ -16,10 +16,8 @@
 
 'use strict';
 
-let numberOfFilms;
-
 const personalMovieDB = {
-    count: numberOfFilms,
+    count: 0,
     movies: {},
     actors: {},
     genres: [],
@@ -63,28 +61,39 @@ const personalMovieDB = {
             console.log(personalMovieDB);
         }
     },
-    writeYourGenres: function () {
-        for (let i = 1; i <= 3; i++) {
-
-            const askUserAboutGenres = prompt(`Ваш любимый жанр под номером ${i}`, '');
-
-            if (askUserAboutGenres === '' || askUserAboutGenres === null) {
-                console.log('Вы ввели некорректные данные');
-                i--;
-            } else {
-                personalMovieDB.genres[i - 1] = askUserAboutGenres;
-            }
-        }
-        this.genres.forEach(function(item, i) {
-            console.log(`Любимый жанр номер ${i + 1} - это ${item}`);
-        });
-    },
     toggleVisibleMyDB: function () {
         if (this.privat) {
             this.privat = false;
         } else {
             this.privat = true;
         }
+    },
+    writeYourGenres: function () {
+        for (let i = 1; i < 2; i++) {
+
+            // const askUserAboutGenres = prompt(`Ваш любимый жанр под номером ${i}`, '');
+
+            // if (askUserAboutGenres === '' || askUserAboutGenres === null) {
+            //     console.log('Вы ввели некорректные данные');
+            //     i--;
+            // } else {
+            //     personalMovieDB.genres[i - 1] = askUserAboutGenres;
+            // }
+
+            const askUserAboutGenres = prompt(`Введите ваш любимый жанр через запятую`);
+
+             if (askUserAboutGenres === '' || askUserAboutGenres === null) {
+                console.log('Вы ввели некорректные данные');
+                i--;
+            } else {
+                this.genres = askUserAboutGenres.split(', ');
+                this.genres.sort();
+            }
+        }
+
+        this.genres.forEach(function(item, i) {
+            console.log(`Любимый жанр номер ${i + 1} - это ${item}`);
+        });
     }
 };
 
